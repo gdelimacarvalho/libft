@@ -1,25 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gade-lim <gade-lim@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/17 16:08:09 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/18 10:29:59 by gade-lim         ###   ########.fr       */
+/*   Created: 2021/05/18 10:34:20 by gade-lim          #+#    #+#             */
+/*   Updated: 2021/05/18 11:06:20 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen (const char *s)
+size_t	strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	i;
+	size_t d;
+	size_t s;
+	size_t result;
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
+	d = 0;
+	result = 0;
+	while (src[result] != '\0')
+		result++;
+	while (dst[d] != '\0')
+		d++;
+	if (size <= d)
+		result = result + size;
+		
 }

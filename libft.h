@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gade-lim <gade-lim@student.42sp.org.br     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/17 16:08:09 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/18 10:29:59 by gade-lim         ###   ########.fr       */
+/*   Created: 2021/05/18 10:22:47 by gade-lim          #+#    #+#             */
+/*   Updated: 2021/05/18 10:31:50 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef LIBFT_H
+# define LIBFT_H
 
-size_t	ft_strlen (const char *s)
-{
-	size_t	i;
+# include <unistd.h>
 
-	i = 0;
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlen (const char *s);
+
+#endif
