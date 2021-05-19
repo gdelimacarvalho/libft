@@ -1,40 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcat.c                                       :+:      :+:    :+:   */
+/*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/18 10:34:20 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/19 10:17:59 by gade-lim         ###   ########.fr       */
+/*   Created: 2021/05/19 14:54:04 by gade-lim          #+#    #+#             */
+/*   Updated: 2021/05/19 15:00:14 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t size)
+int	ft_isalnum(int c)
 {
-	size_t	d;
-	size_t	s;
-	size_t	result;
-
-	d = 0;
-	s = 0;
-	result = 0;
-	while (src[result] != '\0')
-		result++;
-	while (dst[d] != '\0')
-		d++;
-	if (size <= d)
-		result = result + size;
-	else
-		result = result + d;
-	while (d < size - 1 && src[s] != '\0')
-	{
-		dst[d] = src[s];
-		d++;
-		s++;
-	}
-	dst[d] = '\0';
-	return (result);
+	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
+		return (1);
+	return (0);
 }
