@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/20 11:43:51 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/20 11:55:24 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/05/24 11:07:40 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strrchr(const char *s, int c)
 	size_t	i;
 
 	i = ft_strlen(s);
-	while (i >= 0 && s[i] != c)
+	while (s[i] != c)
 	{
 		if (i == 0)
 			return (NULL);
