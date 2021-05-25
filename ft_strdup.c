@@ -1,36 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 15:50:11 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/25 10:26:20 by gade-lim         ###   ########.fr       */
+/*   Created: 2021/05/25 11:00:29 by gade-lim          #+#    #+#             */
+/*   Updated: 2021/05/25 11:42:22 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+char	*ft_strdup(const char *s)
 {
-	size_t			i;
-	unsigned char	*dest_u;
-	unsigned char	*src_u;
-	unsigned char	c_u;
+	char	*new;
+	int		i;
 
-	dest_u = (unsigned char *)dest;
-	src_u = (unsigned char *)src;
-	c_u = (unsigned char)c;
 	i = 0;
-	if (!dest && !dest)
+	new = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (new == NULL)
 		return (NULL);
-	while (i < n)
+	while (s[i] != '\0')
 	{
-		dest_u[i] = src_u[i];
-		if (src_u[i] == c_u)
-			return (dest_u + i + 1);
+		new[i] = s[i];
 		i++;
 	}
-	return (NULL);
+	new[i] = '\0';
+	return (new);
 }

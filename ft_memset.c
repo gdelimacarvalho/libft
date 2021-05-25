@@ -1,36 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 15:50:11 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/25 10:26:20 by gade-lim         ###   ########.fr       */
+/*   Created: 2021/05/25 10:30:06 by gade-lim          #+#    #+#             */
+/*   Updated: 2021/05/25 15:00:25 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	size_t			i;
-	unsigned char	*dest_u;
-	unsigned char	*src_u;
+	unsigned char	*s_u;
 	unsigned char	c_u;
 
-	dest_u = (unsigned char *)dest;
-	src_u = (unsigned char *)src;
+	s_u = (unsigned char *)s;
 	c_u = (unsigned char)c;
 	i = 0;
-	if (!dest && !dest)
-		return (NULL);
 	while (i < n)
 	{
-		dest_u[i] = src_u[i];
-		if (src_u[i] == c_u)
-			return (dest_u + i + 1);
+		s_u[i] = c_u;
 		i++;
 	}
-	return (NULL);
+	return (s_u);
 }

@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 10:22:47 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/24 21:42:24 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/05/25 11:09:40 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <unistd.h>
 # include <stdlib.h>
 
-// memset
-// bzero
+void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
@@ -38,7 +38,7 @@ int		ft_isascii(int c);
 int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
-// calloc
-// strdup
+void	*ft_calloc(size_t nelem, size_t elsize);
+char	*ft_strdup(const char *s);
 
 #endif
