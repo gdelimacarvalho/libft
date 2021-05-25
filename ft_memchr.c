@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 11:56:46 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/24 12:16:13 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/05/24 21:46:44 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	size_t			i;
 	unsigned char	*s_u;
-	unsigned char	*c_u;
+	unsigned char	c_u;
 
 	s_u = (unsigned char *)s;
 	c_u = (unsigned char)c;
