@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 10:22:47 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/25 11:09:40 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/05/25 18:15:31 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,15 @@ int		ft_toupper(int c);
 int		ft_tolower(int c);
 void	*ft_calloc(size_t nelem, size_t elsize);
 char	*ft_strdup(const char *s);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+char	*ft_strjoin(char const *s1, char const *s2);
+// ft_strtrim
+// ft_split
+// ft_itoa
+// ft_strmapi
+// ft_putchar_fd
+// ft_putstr_fd
+// ft_putendl_fd
+// ft_putnbr_fd
 
 #endif
