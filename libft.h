@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 10:22:47 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/26 11:30:00 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/05/27 11:24:03 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 // ft_split
-// ft_itoa
+char	*ft_itoa(int n);
 // ft_strmapi
 // ft_putchar_fd
 // ft_putstr_fd
