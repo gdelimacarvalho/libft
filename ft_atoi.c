@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 16:56:24 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/24 11:37:36 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/09 10:25:28 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_atoi(const char *str)
 	int	result;
 
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\t'
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\f'
 		|| str[i] == '\n' || str[i] == '\r' || str[i] == '\v')
 		i++;
 	sign = 1;

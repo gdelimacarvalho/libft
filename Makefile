@@ -6,7 +6,7 @@
 #    By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/02 10:51:03 by gade-lim          #+#    #+#              #
-#    Updated: 2021/06/02 15:28:13 by gade-lim         ###   ########.fr        #
+#    Updated: 2021/06/08 19:15:01 by gade-lim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,8 +56,8 @@ CFLAGS	=	-Wall -Werror -Wextra
 all:	$(NAME)
 
 $(NAME):	$(OBJS)
-	ar rcs $@ $<
-
+	ar rcs $@ $^
+	
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
