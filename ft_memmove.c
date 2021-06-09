@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 16:32:48 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/25 10:27:03 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/09 12:50:40 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 
 	dest_u = (unsigned char *)dest;
 	src_u = (unsigned char *)src;
+	if (dest_u == NULL && src_u == NULL)
+		return (NULL);
 	if (dest > src)
 	{
 		while (n-- > 0)

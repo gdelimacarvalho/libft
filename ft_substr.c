@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/25 15:04:17 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/06/09 11:31:04 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/09 14:20:20 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,13 +18,15 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 
 	i = 0;
+	if (s == NULL)
+		return (NULL);
 	if (ft_strlen(s) < start)
 		new_s = (char *)malloc(1 * sizeof(char));
 	else if (ft_strlen(s) - start < len)
 		new_s = (char *)malloc((ft_strlen(s) - start + 1) * sizeof(char));
 	else
 		new_s = (char *)malloc((len + 1) * sizeof(char));
-	if (s == NULL || new_s == NULL)
+	if (new_s == NULL)
 		return (NULL);
 	if (start >= ft_strlen(s))
 		len = 0;

@@ -6,7 +6,7 @@
 #    By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/02 10:51:03 by gade-lim          #+#    #+#              #
-#    Updated: 2021/06/08 19:15:01 by gade-lim         ###   ########.fr        #
+#    Updated: 2021/06/09 12:40:40 by gade-lim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,3 +68,7 @@ fclean:
 	rm -rf $(NAME) $(OBJS)
 
 re: fclean all
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
