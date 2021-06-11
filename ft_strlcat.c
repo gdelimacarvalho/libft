@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 10:34:20 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/05/24 11:51:35 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/11 12:08:21 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,19 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t	d;
-	size_t	s;
-	size_t	result;
+	size_t	i;
+	size_t	j;
 
-	d = 0;
-	s = 0;
-	result = 0;
-	while (src[result] != '\0')
-		result++;
-	while (dst[d] != '\0')
-		d++;
-	if (size <= d)
-		result = result + size;
-	else
-		result = result + d;
-	while (d + 1 < size && src[s] != '\0')
+	i = 0;
+	j = 0;
+	while (dst[i] != '\0' && i < size)
+		i++;
+	while (src[j] != '\0' && (i + j + 1) < size)
 	{
-		dst[d] = src[s];
-		d++;
-		s++;
+		dst[i + j] = src[j];
+		j++;
 	}
-	dst[d] = '\0';
-	return (result);
+	if (i < size)
+		dst[i + j] = '\0';
+	return (i + ft_strlen(src));
 }
