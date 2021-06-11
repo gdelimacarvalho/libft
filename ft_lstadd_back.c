@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 12:48:03 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/06/10 15:07:27 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/11 15:18:07 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 			*lst = new;
 		else
 		{
-			tmp = ft_lstlast(*(lst));
+			tmp = ft_lstlast(*lst);
 			tmp->next = new;
 		}
 	}

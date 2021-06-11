@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 15:09:24 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/06/10 15:31:46 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/11 14:59:37 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 		del(tmp->content);
 		free(tmp);
 	}
-	*lst = NULL;
 }

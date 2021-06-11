@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 15:50:11 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/06/09 14:27:54 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/11 18:05:39 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	src_u = (unsigned char *)src;
 	c_u = (unsigned char)c;
 	i = 0;
-	if (!dest && !src)
+	if (dest == NULL && src == NULL)
 		return (NULL);
 	while (i < n)
 	{

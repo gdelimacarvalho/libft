@@ -6,7 +6,7 @@
 #    By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/06/02 10:51:03 by gade-lim          #+#    #+#              #
-#    Updated: 2021/06/11 12:24:51 by gade-lim         ###   ########.fr        #
+#    Updated: 2021/06/11 18:03:53 by gade-lim         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,5 +81,9 @@ fclean:	clean
 
 re: fclean all
 
-bonus:	$(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
+bonus:	$(BONUS_OBJS)
+	ar rcs $(NAME) $(BONUS_OBJS)
+
+so:
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(SRC)
+	gcc -nostartfiles -shared -o libft.so $(OBJS)
