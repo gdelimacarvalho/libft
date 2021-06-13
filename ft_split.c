@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 15:28:29 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/06/08 14:59:12 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/13 19:12:25 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,20 @@ static char	**ft_mallocfail(char **res)
 	return (NULL);
 }
 
+void	*ft_nullcheck_alloc(char const *s, char c)
+{
+	size_t	n_words;
+	char	**res;
+
+	if (s == NULL)
+		return (NULL);
+	n_words = ft_numberof_words(s, c);
+	res = (char **)ft_calloc(n_words + 1, sizeof(char *));
+	if (res == NULL)
+		return (NULL);
+	return (res);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t	n_words;
@@ -64,11 +78,10 @@ char	**ft_split(char const *s, char c)
 	size_t	j;
 	char	**res;
 
-	i = 0;
-	n_words = ft_numberof_words(s, c);
-	res = (char **)ft_calloc(n_words + 1, sizeof(char *));
+	res = ft_nullcheck_alloc(s, c);
 	if (res == NULL)
 		return (NULL);
+	n_words = ft_numberof_words(s, c);
 	i = 0;
 	j = 0;
 	while (i < n_words)

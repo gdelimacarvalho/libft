@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/10 15:34:36 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/06/11 11:05:48 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/13 18:48:55 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*res;
 	t_list	*elem;
 
-	if (f == NULL || del == NULL)
+	if (f == NULL || lst == NULL)
 		return (NULL);
 	res = NULL;
 	while (lst != NULL)
