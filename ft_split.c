@@ -6,7 +6,7 @@
 /*   By: gade-lim <gade-lim@students.42sp.org.br    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/02 15:28:29 by gade-lim          #+#    #+#             */
-/*   Updated: 2021/06/13 19:12:25 by gade-lim         ###   ########.fr       */
+/*   Updated: 2021/06/13 19:21:13 by gade-lim         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ static char	**ft_mallocfail(char **res)
 	return (NULL);
 }
 
-void	*ft_nullcheck_alloc(char const *s, char c)
+static void	*ft_nullcheck_alloc(char const *s, char c)
 {
 	size_t	n_words;
 	char	**res;
